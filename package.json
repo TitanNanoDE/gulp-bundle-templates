@@ -1,0 +1,25 @@
+{
+  "name": "gulp-bundle-templates",
+  "version": "1.0.0",
+  "description": "Bundles external templates into your index.html",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TitanNanoDE/gulp-bundle-templates.git"
+  },
+  "keywords": [
+    "gulp",
+    "application-frame",
+    "html",
+    "templates"
+  ],
+  "author": "Jovan Gerodetti (TitanNano)",
+  "license": "CC-BY-SA-4.0",
+  "bugs": {
+    "url": "https://github.com/TitanNanoDE/gulp-bundle-templates/issues"
+  },
+  "homepage": "https://github.com/TitanNanoDE/gulp-bundle-templates#readme"
+}

@@ -7,6 +7,7 @@ const Through = require('through2');
 const importTemplate = function(source, filePath) {
     let matches = null;
     let findImports = /<template[^>]*( src="([^"]+)")[^>]*><\/template>/g;
+    let htmlTarget = source;
 
     while ((matches = findImports.exec(source))) {
         let [template, src, path] = matches;
@@ -27,7 +28,7 @@ const importTemplate = function(source, filePath) {
 
             // insert into current file
             newTemplate = newTemplate.replace(/></, `>${templateContent}<`);
-            source = source.replace(template, newTemplate);
+            htmlTarget = htmlTarget.replace(template, newTemplate);
         } catch (e) {
             if (e.code === 'ENOENT') {
                 throw new Error(`can't find template at ${e.path}!`);
@@ -37,7 +38,7 @@ const importTemplate = function(source, filePath) {
         }
     }
 
-    return source;
+    return htmlTarget;
 };
 
 module.exports = function() {

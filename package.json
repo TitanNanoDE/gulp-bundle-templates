@@ -1,6 +1,6 @@
 {
   "name": "gulp-bundle-templates",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Bundles external templates into your index.html",
   "main": "main.js",
   "scripts": {

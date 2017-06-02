@@ -1,6 +1,6 @@
 const Path = require('path');
 const fs = require('fs');
-const jsdom = require('jsdom').jsdom;
+const { JSDOM } = require('jsdom');
 const Through = require('through2');
 
 
@@ -20,8 +20,7 @@ const importTemplate = function(source, filePath) {
         try {
             // read template content
             templateContent = fs.readFileSync(path).toString('utf-8');
-
-            templateContent = jsdom(templateContent).defaultView.document.querySelector('template').innerHTML;
+            templateContent = (new JSDOM(templateContent)).window.document.querySelector('template').innerHTML;
 
             // check of new imports in the loaded file
             templateContent = importTemplate(templateContent, path);

@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/TitanNanoDE/gulp-bundle-templates#readme",
   "dependencies": {
-    "jsdom": "^11.0.0",
+    "jsdom": "^11.1.0",
     "through2": "^2.0.3"
   }
 }
